@@ -1,0 +1,15 @@
+{
+   "name": "administrator/mvc",
+   "autoload": {
+      "psr-4": {
+         "Src\\": "src/"
+      }
+   },
+   "authors": [
+      {
+         "name": "ThangQ",
+         "email": "devet.279@gmail.com"
+      }
+   ],
+   "require": {}
+}
