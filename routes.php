@@ -59,6 +59,13 @@ $route->get('/product', function ($req, $res) {
       ['products' => $pro]
    );
 });
+$route->get('/customer', function ($req, $res) {
+   $cus = $res->model('Customers')->getAll();
+   $res->render(
+      'customer',
+      ['customers' => $cus]
+   );
+});
 
 // !DO NOT CHANGE
 $route->addNotFoundHandler(function ($req, $res) {
