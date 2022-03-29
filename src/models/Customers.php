@@ -45,10 +45,6 @@ class Customers extends Database
       QUE;
       $stmt = $this->conn->prepare($query);
       $stmt->execute();
-      $data = [];
-      while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-         array_push($data, $row);
-      }
-      return $data;
+      return $stmt->fetchAll(PDO::FETCH_ASSOC);
    }
 }
